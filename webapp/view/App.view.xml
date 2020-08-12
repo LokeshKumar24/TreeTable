@@ -1,0 +1,76 @@
+<mvc:View controllerName="TT.TreeTable.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" 
+xmlns:layout="sap.ui.layout" xmlns:tab="sap.ui.table">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<!--<layout:VerticalLayout width="100%" class="gridWrapper">-->
+						<!--				<layout:Grid containerQuery="true" defaultSpan="XL3 L3" hSpacing="2">-->
+						<!--					<Label text="Date"></Label>-->
+											<!--<DatePicker displayFormat="short" editable="false" id="date"></DatePicker>-->
+						<!--					<Label text="Name"></Label>-->
+											<!--<Input id="orderId" editable="false"></Input>-->
+						<!--					<Label text="CustomerName"></Label>-->
+											<!--<Input id="customerName"></Input>-->
+						<!--					<Label text="CustomerNumber"></Label>-->
+											<!--<Input id="customerNumber" maxLength="10"></Input>-->
+				
+						<!--				</layout:Grid>-->
+						<!--			</layout:VerticalLayout>-->
+						<!--		<layout:VerticalLayout width="100%" class="gridWrapper">-->
+						<!--				<layout:Grid containerQuery="true" defaultSpan="XL3 L3" hSpacing="2">-->
+											<!--<Label text="Date"></Label>-->
+						<!--					<DatePicker displayFormat="short" editable="false" id="date"></DatePicker>-->
+											<!--<Label text="Name"></Label>-->
+						<!--					<Input id="orderId" editable="false"></Input>-->
+											<!--<Label text="CustomerName"></Label>-->
+						<!--					<Input id="customerName"></Input>-->
+											<!--<Label text="CustomerNumber"></Label>-->
+						<!--					<Input id="customerNumber" maxLength="10"></Input>-->
+				
+						<!--				</layout:Grid>-->
+						<!--			</layout:VerticalLayout>-->
+					<tab:TreeTable rows="{/EmployeeList}"  > 
+						<tab:toolbar>
+							<Toolbar>
+								<Title id="title2" text="TreeTable"></Title>
+						<ToolbarSpacer/>
+						<SearchField
+							placeholder="Search"
+							search="onSearch"
+							width="15rem"/>
+						<Button id="editButton3" text="Edit" type="Transparent" press="onEdit" />	
+						<Button id="editButton4" text="MakeEditable" type="Transparent" press="onMakeEditable" />	
+						
+							</Toolbar>
+						</tab:toolbar>
+						<tab:columns>
+							<tab:Column label="{i18n>empId}">
+								<tab:template>
+									<Input value="{empId}"/>
+								</tab:template>
+							</tab:Column>
+								<tab:Column label="{i18n>empName}">
+								<tab:template>
+									<Input value="{empName}"/>
+								</tab:template>
+							</tab:Column>
+								<tab:Column label="{i18n>company}">
+								<tab:template>
+									<Input value="{company}"/>
+								</tab:template>
+							</tab:Column>
+								<tab:Column label="{i18n>job}">
+								<tab:template>
+									<Input value="{job}"/>
+								</tab:template>
+							</tab:Column>
+						</tab:columns>
+					</tab:TreeTable>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
